@@ -27,7 +27,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"picom", NULL,
+	"picom", "-b",NULL,
 	"feh","--bg-scale", "/home/bonet/Downloads/rain-drops.jpg",NULL,
 	NULL /* terminate */
 };
