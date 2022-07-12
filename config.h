@@ -139,8 +139,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },	
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = killallxinitcmd } },	
 	{ MODKEY,			XK_w,      spawn,          {.v = browsercmd } },
-	{ MODKEY,			XK_plus,   spawn,	   SHCMD("pactl -- set-sink-volume 0 +5%") },
-	{ MODKEY,			XK_minus,  spawn,	   SHCMD("pactl -- set-sink-volume 0 -5%") },
+	{ MODKEY,			XK_plus,   spawn,	   SHCMD("pactl -- set-sink-volume 0 +5%; pkill -RTMIN+1 dwmblocks") },
+	{ MODKEY,			XK_minus,  spawn,	   SHCMD("pactl -- set-sink-volume 0 -5%; pkill -RTMIN+1 dwmblocks") },
 };
 
 /* button definitions */
