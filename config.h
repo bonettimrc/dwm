@@ -28,14 +28,6 @@ static const unsigned int alphas[][3]      = {
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
-static const char *const autostart[] = {	
-	"picom", "-b",NULL,
-	"xrdb", "$HOME/.Xresources", NULL,
-	"feh","--bg-scale", "/home/bonet/Downloads/rain-drops.jpg",NULL,
-	"dwmblocks", NULL,
-	NULL /* terminate */
-};
-
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
