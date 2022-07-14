@@ -103,8 +103,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	// { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	// { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
@@ -119,9 +119,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-//	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-//	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-//	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	// { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	// { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -133,9 +133,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },	
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = killallxinitcmd } },	
-	{ MODKEY,			XK_w,      spawn,          {.v = browsercmd } },
-	{ MODKEY,			XK_plus,   spawn,	   SHCMD("pactl -- set-sink-volume 0 +5%; pkill -RTMIN+1 dwmblocks") },
-	{ MODKEY,			XK_minus,  spawn,	   SHCMD("pactl -- set-sink-volume 0 -5%; pkill -RTMIN+1 dwmblocks") },
+	{ MODKEY,						XK_w,      spawn,          {.v = browsercmd } },
+	{ MODKEY,						XK_plus,   spawn,	   SHCMD("pactl -- set-sink-volume 0 +5%; pkill -RTMIN+1 dwmblocks") },
+	{ MODKEY,						XK_minus,  spawn,	   SHCMD("pactl -- set-sink-volume 0 -5%; pkill -RTMIN+1 dwmblocks") },
+	{ MODKEY,                       XK_l,      spawn,       SHCMD("slock") },
 };
 
 /* button definitions */
